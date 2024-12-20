@@ -1,0 +1,37 @@
+###
+
+GET http://localhost:3000/posts
+
+###
+
+GET http://localhost:3000/posts?owner=linophir
+
+###
+
+GET http://localhost:3000/posts/6763e74b49dde5a486fc5b5e
+ 
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Hello",
+    "owner": "linophir",
+    "content": "Hello World..."
+}
+
+###
+
+GET http://localhost:3000/posts?sender=localhost:3000/posts?owner=linophir 
+
+###
+
+PUT http://localhost:3000/posts/6763e74b49dde5a486fc5b5e
+
+Content-Type: application/json
+
+{
+    "title": "Updated Title",
+    "content": "This is the updated content of the post."
+}
