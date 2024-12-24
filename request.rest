@@ -35,3 +35,44 @@ Content-Type: application/json
     "title": "Updated Title",
     "content": "This is the updated content of the post."
 }
+
+
+### 
+
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "postId": "67614a788727ad32b5f8d46e",
+  "owner": "linophir",
+  "comment": "This is a comment"
+}
+
+### 
+GET http://localhost:3000/comments/6763e74b49dde5a486fc5b5e
+
+Response:
+[
+  {
+    "postId": "6763e74b49dde5a486fc5b5e",
+    "owner": "linophir",
+    "comment": "string",
+  }
+]
+
+### 
+PUT http://localhost:3000/comments/6763e74b49dde5a486fc5b5e
+
+Content-Type: application/json
+Body:
+{
+  "content": "updated content"
+}
+
+### 
+DELETE http://localhost:3000/comments/6763e74b49dde5a486fc5b5e
+
+Content-Type: application/json 
+{
+  "message": "Comment deleted successfully"
+}
